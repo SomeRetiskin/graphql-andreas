@@ -3,9 +3,8 @@ export function createBarChart(elementId, data) {
     const chartWidth = 1200;
     const chartHeight = 600;
     const padding = 150;
-    const barWidth = 40;
+    const barWidth = 20;
     const barSpacing = 17;
-    const width = chartWidth - 2 * padding;
 
     const maxXP = Math.max(...data.map(d => d.amount));
     const yScale = (chartHeight - 2 * padding) / maxXP;

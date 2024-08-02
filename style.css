@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #000;
+	background-color: #000;
 	color: #FFF;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 300;
@@ -146,8 +146,8 @@ img.svg-white {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: blue;
-  padding-top: 1rem;
+	background: blue;
+	padding-top: 1rem;
 }
 
 button,
@@ -195,4 +195,12 @@ textarea:hover {
 	width: 100%;
 	display: flex;
 	justify-content: end;
+}
+
+.error-message {
+	display: flex;
+	justify-items: center;
+	padding: .5rem;
+	width: 100%;
+	color: red;
 }

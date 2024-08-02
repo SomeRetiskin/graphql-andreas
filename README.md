@@ -1,7 +1,7 @@
 # graphql
 
 ![main page](./promo/gql_main_1.png)
-Version 1.0
+Version 1.1
 
 GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.
 
@@ -35,6 +35,7 @@ This application is being hosted in: https://someretiskin.github.io/graphql-andr
    ```
 2. Install/Update dependencies and run the program:
    ```bash
+   npm install
    npm run start
    ```
 3. Open your browser and navigate to http://localhost:4000.

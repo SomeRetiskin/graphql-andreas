@@ -31,13 +31,12 @@ export async function handleLogin() {
            window.location.href = "profile.html";
     } catch (error) {
         console.error(error);
-        alert('An error occurred. Please try again later.');
     }
 }
 
 function showError(message) {
     const error = document.getElementById('error-message');
-    error.innerHTML = `${message} <button id='error-btn'>OK</button>`;
+    error.innerHTML = `<div class="error-message">${message}</div>`;
     error.style.display = "block";
     document.getElementById('error-btn').addEventListener('click', () => {
         error.style.display = 'none';
@@ -85,11 +84,9 @@ function getErrorMessage(status) {
     switch (status) {
         case 400:
             return "Invalid login request. Please check your credentials.";
-        case 401:
+        case 401: default:
             return "Invalid username or password.";
         case 404:
             return "API endpoint not found.";
-        default:
-            return "An error occurred during login.";
     }
 }
