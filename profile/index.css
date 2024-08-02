@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 45px;
+    padding: 1rem;
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 35px;
+    padding: 1rem;
+}
+
+h3 {
+    color: white;
+    font-size: 25px;
+}
+
+p {
+    margin: 20px;
+}
+
+body {
+    background-color: #000;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.logout-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#identification {
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.containers {
+    display: flex;
+    width: 100%;
+}
+
+.wrapper-container {
+    min-width: 680px;
+}
+
+.wrapper-container, .wrapper-container2 {
+    height: 700px;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    background-color: #272529;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.chart {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.chart.bar {
+    fill: #CAADFF;
+}
+
+.bar:hover {
+    fill: gray;
+}
+
+.chart.label {
+    text-anchor: middle;
+}
+
+#svg {
+    width: 100%;
+    height: auto;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+
+.axis line,
+.axis path {
+    shape-rendering: crispEdges;
+    stroke: white;
+    fill: none;
+}
+
+.axis text {
+    font-size: 15px;
+    stroke: white;
+}
+
+.inner-container {
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    display: none;
+}
+
+.info-container.rotated .front {
+    display: none;
+}
+
+.info-container.rotated .back {
+    display: block;
+}
+
+.info-container.rotated .inner-container.front {
+    animation: rotateForward 1s forwards;
+}
+
+.info-container.rotated .inner-container.back {
+    animation: rotateBackward 1s forwards;
+}
+
+
+/*audits*/
+.wrapper-container.rotated .front {
+    display: none;
+}
+
+.wrapper-container.rotated .back {
+    display: block;
+}
+
+.wrapper-container.rotated .inner-container.front {
+    animation: rotateForward 1s forwards;
+}
+
+.wrapper-container.rotated .inner-container.back {
+    animation: rotateBackward 1s forwards;
+}
+
+
+@keyframes rotateForward {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes rotateBackward {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+
+#audit-info {
+    overflow-y: auto;
+    height: 92.5%;
+}
+
+.auditbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.audit-button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: blue;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.audit-button:focus, .audit-button:active {
+    border-bottom: 3px solid blue;
+    color: #FFF;
+}
