@@ -24,18 +24,18 @@ Git and NodeJs should be installed on your machine. Also have your <a href="http
 
 #### Hosting
 
-This application is being hosted in: [No link available]
+This application is being hosted in: https://someretiskin.github.io/graphql-andreas
 
 #### Using Terminal
 
 1. Clone the repository:
    ```bash
    git clone https://01.kood.tech/git/aselge/graphql.git
-   cd graphql
+   cd graphql-andreas-main
    ```
 2. Install/Update dependencies and run the program:
    ```bash
-   go run .
+   npm run start
    ```
 3. Open your browser and navigate to http://localhost:4000.
 
